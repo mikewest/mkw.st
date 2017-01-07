@@ -1,0 +1,27 @@
+mkw.st {
+  status 204 /favicon.ico
+  status 404 /Caddyfile
+
+  header / {
+    Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    Content-Security-Policy "default-src 'self'; img-src 'self' data:; font-src https://themes.googleusercontent.com; frame-ancestors 'none'"
+    X-XSS-Protection "1; mode=block"
+    X-Content-Type-Options "nosniff"
+  }
+
+  redir 301 {
+    /+  https://plus.google.com/104437754419996754779/posts
+
+    /r/CSP http://www.html5rocks.com/en/tutorials/security/content-security-policy/
+    /r/csp http://www.html5rocks.com/en/tutorials/security/content-security-policy/
+
+    /r/subint/?$ https://w3c.github.io/webappsec/specs/subresourceintegrity/
+
+    /r/fec13 https://mikewest.org/2013/09/frontend-security-frontendconf-2013
+    /r/cssconfeu2013 https://speakerdeck.com/mikewest/xss-no-the-other-s-cssconf-eu-2013
+    /r/jsconfeu2013 https://speakerdeck.com/mikewest/towards-a-post-xss-world-jsconf-eu-2013
+    /r/goto2013 https://speakerdeck.com/mikewest/web-platform-the-secure-parts-goto-aarhus-2013
+    /r/devoxx2013 https://speakerdeck.com/mikewest/no-privilege-no-risk-devoxx-2013
+    /r/hackpra2014 https://speakerdeck.com/mikewest/user-agent-lockdown-hackpra-2014
+  }
+}

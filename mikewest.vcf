@@ -1,0 +1,11 @@
+N:VCARD
+VERSION:3.0
+N:West;Mike
+FN:Mike West
+ORG:Google
+TITLE:Software Engineer
+EMAIL;TYPE=HOME,PREF,INTERNET:mike@mikewest.org
+EMAIL;TYPE=WORK,INTERNET:mkwst@google.com
+URL:http://mikewest.org/
+REV:2017-01-07
+END:VCARD
